@@ -7,6 +7,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  /* font-family */
+  --poppins-font: "Poppins", sans-serif;
+  --roboto-font: "Roboto", system-ui;
+  /* font-weight */
+  --regular-weight: 400;
+  --bold-weight: 700;
+}
+
 header {
   width: 100%;
   padding: 64px 136px;
