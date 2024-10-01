@@ -113,6 +113,16 @@ nav ul li a:hover {
   font-size: 18px;
   color: #9e6dc2;
 }
+#bannerInfo-link:hover > #bannerInfo-link-text {
+  color: #af59d6;
+  transition: 0.3s;
+}
+#bannerInfo-link:hover > #bannerInfo-link-arrow {
+  transform: translateX(8px);
+}
+#bannerInfo-link-arrow {
+  transition: all 0.3s;
+}
 #bannerImg {
   width: 50%;
 }
