@@ -1,31 +1,37 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing:border-box; 
+  box-sizing: border-box;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* font-family */
+  --poppins-font: "Poppins", sans-serif;
+  --roboto-font: "Roboto", system-ui;
+  /* font-weight */
+  --regular-weight: 400;
+  --bold-weight: 700;
 }
 
 header {
   width: 100%;
   padding: 64px 136px;
   display: flex;
-  justify-content: space-around ;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(41, 7, 66, 1);
 }
-
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 32px;
-  
 }
 
 nav ul li a {
-  
   color: #fff;
   text-decoration: none;
   font-size: 18px;
@@ -38,7 +44,6 @@ nav ul li a:hover {
 
 .search-bar {
   display: flex;
-  
 }
 
 .search-bar input {
@@ -46,7 +51,7 @@ nav ul li a:hover {
   width: 230px;
   border: none;
   border-radius: 4px 0 0 4px;
-  background-color:  rgba(23, 0, 39, 1);
+  background-color: rgba(23, 0, 39, 1);
   color: #ffff;
 }
 
@@ -63,10 +68,70 @@ nav ul li a:hover {
 
 .search-bar button:hover {
   background-color: #af59d6;
- 
 }
 
-.search-bar input::placeholder { 
+.search-bar input::placeholder {
   color: white;
-  padding:25px;
+  padding: 25px;
+}
+
+/* BANNER */
+#bannerContainer {
+  width: 100%;
+  padding: 0 136px 64px 136px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(41, 7, 66, 1);
+  border-bottom: solid 8px #4ae346;
+}
+#bannerInfo {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#bannerInfo-title {
+  font-family: var(--poppins-font);
+  font-weight: var(--bold-weight); /* 700 */
+  font-style: normal;
+  font-size: 36px;
+  line-height: 54px;
+  color: #9e6dc2;
+}
+#bannerInfo-paragraph {
+  font-family: var(--roboto-font);
+  font-weight: var(--regular-weight); /* 400 */
+  font-style: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: #fbf6ff;
+}
+#bannerInfo-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+#bannerInfo-link-text {
+  font-family: var(--roboto-font);
+  font-weight: var(--bold-weight); /* 700 */
+  font-style: normal;
+  font-size: 18px;
+  color: #9e6dc2;
+}
+#bannerInfo-link:hover > #bannerInfo-link-text {
+  color: #af59d6;
+  transition: 0.3s;
+}
+#bannerInfo-link:hover > #bannerInfo-link-arrow {
+  transform: translateX(8px);
+}
+#bannerInfo-link-arrow {
+  transition: all 0.3s;
+}
+#bannerImg {
+  width: 50%;
 }
