@@ -36,6 +36,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s ease;
+  font-family: var(--roboto-font);
 }
 
 nav ul li a:hover {
@@ -53,6 +54,7 @@ nav ul li a:hover {
   border-radius: 4px 0 0 4px;
   background-color: rgba(23, 0, 39, 1);
   color: #ffff;
+  font-family: var(--roboto-font);
 }
 
 .search-bar button {
