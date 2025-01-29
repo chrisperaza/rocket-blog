@@ -35,7 +35,7 @@ nav ul {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   transition: color 0.3s ease;
   font-family: var(--roboto-font);
 }
@@ -103,7 +103,7 @@ nav ul li a:hover {
   font-family: var(--roboto-font);
   font-weight: var(--regular-weight); /* 400 */
   font-style: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 27px;
   color: #fbf6ff;
 }
@@ -156,6 +156,9 @@ nav ul li a:hover {
 .mainSection-dates,
 .mainSection-texts {
   font-family: var(--roboto-font);
+  line-height: 27px;
+  font-size: 16px;
+  color: #191919;
 }
 .mainSection-images {
   width: 100%;
