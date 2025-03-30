@@ -14,6 +14,17 @@
   /* font-weight */
   --regular-weight: 400;
   --bold-weight: 700;
+
+  font-size: 62.5%; /* 10px */
+  /*cada unidade de medida se divide por 
+   10 como se rodase uma casa */
+  /* e se coloca rem */
+
+  /*REM é uma unidade de medida relativa que é adaptada a reponsividade*/
+  /*REM = Root EM*/
+  /* 1 rem = 16px*/
+  /*qualquer unidade de medida deve ser divida por 16 */
+  /*para saber o resultado em rem, caso não queira ser aplicado 62.5% no root*/
 }
 
 /*****************************/
@@ -21,7 +32,7 @@
 /*****************************/
 header {
   width: 100%;
-  padding: 64px 136px;
+  padding: 6.4rem 13.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,13 +41,13 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 32px;
+  gap: 3.2rem;
 }
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
+  font-size: 1.6rem;
+  transition: color 0.5s ease;
   font-family: var(--roboto-font);
 }
 nav ul li a:hover {
@@ -46,8 +57,8 @@ nav ul li a:hover {
   display: flex;
 }
 .search-bar input {
-  padding: 10px;
-  width: 230px;
+  padding: 1rem;
+  width: 23rem;
   border: none;
   border-radius: 4px 0 0 4px;
   background-color: rgba(23, 0, 39, 1);
@@ -55,21 +66,21 @@ nav ul li a:hover {
   font-family: var(--roboto-font);
 }
 .search-bar button {
-  padding: 10px;
+  padding: 1rem;
   background-color: #8c42a3;
   border: none;
   border-radius: 0 4px 4px 0;
   color: #fff;
   cursor: pointer;
-  width: 70px;
-  height: 45px;
+  width: 7rem;
+  height: 4.5rem;
 }
 .search-bar button:hover {
   background-color: #af59d6;
 }
 .search-bar input::placeholder {
   color: white;
-  padding: 25px;
+  padding: 2.5rem;
 }
 
 /*****************************/
@@ -77,7 +88,7 @@ nav ul li a:hover {
 /*****************************/
 #bannerContainer {
   width: 100%;
-  padding: 0 136px 64px 136px;
+  padding: 0 13.6rem 6.4rem 13.6rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -89,22 +100,22 @@ nav ul li a:hover {
   width: 40%;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 2.5rem;
 }
 #bannerInfo-title {
   font-family: var(--poppins-font);
   font-weight: var(--bold-weight); /* 700 */
   font-style: normal;
-  font-size: 36px;
-  line-height: 54px;
+  font-size: 3.6rem;
+  line-height: 5.4rem;
   color: #9e6dc2;
 }
 #bannerInfo-paragraph {
   font-family: var(--roboto-font);
   font-weight: var(--regular-weight); /* 400 */
   font-style: normal;
-  font-size: 16px;
-  line-height: 27px;
+  font-size: 1.6rem;
+  line-height: 2.7rem;
   color: #fbf6ff;
 }
 #bannerInfo-link {
@@ -118,7 +129,7 @@ nav ul li a:hover {
   font-family: var(--roboto-font);
   font-weight: var(--bold-weight); /* 700 */
   font-style: normal;
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #9e6dc2;
 }
 #bannerInfo-link:hover > #bannerInfo-link-text {
@@ -139,25 +150,25 @@ nav ul li a:hover {
 /**** MAIN ****/
 /*****************************/
 #main {
-  padding: 54px 136px;
+  padding: 5.4rem 13.6rem;
   display: flex;
   flex-direction: column;
-  gap: 54px;
+  gap: 5.4rem;
 }
 .mainSection-dates {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #3e3e3e;
 }
 .mainSection-titles {
   font-family: var(--poppins-font);
   color: rgba(41, 7, 66, 1);
-  padding: 10px 0;
+  padding: 1rem 0;
 }
 .mainSection-dates,
 .mainSection-texts {
   font-family: var(--roboto-font);
-  line-height: 27px;
-  font-size: 16px;
+  line-height: 2.7rem;
+  font-size: 1.6rem;
   color: #191919;
 }
 .mainSection-images {
@@ -175,7 +186,7 @@ nav ul li a:hover {
   & #mainContainer1-aside {
     width: 40%;
     & hr {
-      margin: 20px 0;
+      margin: 2rem 0;
       border: 1px #e3e3e3 solid;
     }
   }
@@ -184,5 +195,264 @@ nav ul li a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 20px;
+  gap: 2rem;
+}
+
+.menu-toggle {
+  display: none;important! /*aqui estoy forçando que nao apareçam os icones na versão desktop*/
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem;
+}
+
+/* Estilos específicos para o menu desktop */
+nav {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+}
+
+/* Mobile
+
+  5 Estrategias para dominar  para desenvolver qualquer aplicação responsivas
+
+
+  1. Utilização de Porcentagem para trabalhar com larguras de forma dinamica e imagens
+  2. Fontes responsivas (em) e (rem)
+  3. Flexbox para posicionamentos dos elementos responsivos sem utilizar necesariamente unidade de medida
+  4. Grid para definir a estrutura da minha pagina
+  5. Media Query
+
+*/
+
+/* Regras para dispositivos móveis (smartphones) */
+/* ============================================= */
+/* MEDIA QUERIES PARA DISPOSITIVOS MÓVEIS (Até 768px) */
+/* ============================================= */
+
+@media (max-width: 768px) {
+  /* Ajuste base para mobile */
+  :root {
+    font-size: 50%; /* 1rem = 8px */
+  }
+
+  main {
+    padding: 6rem 2.3rem 6.6rem;
+    max-width: 33rem;
+    margin: 0 auto;
+  }
+
+  /* HEADER MOBILE - Layout otimizado */
+  header {
+    padding: 2.4rem;
+    position: relative;
+    display: grid;
+    grid-template-areas:
+      "logo . hamburger"
+      "search search search";
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+
+  .logo img {
+    height: 2.4rem;
+    width: auto;
+  }
+
+  /* Botões do menu - Estilos otimizados */
+  /* Mostra os botões apenas em mobile */
+  .menu-toggle {
+    display: block; /* Sobrescreve o display: none do desktop */
+    background: none;
+    border: none;
+    justify-self:start;
+  }
+
+  /* Esconde a navegação padrão em mobile */
+  nav:not(.active) ul {
+    display: none;
+  }
+
+  .menu-toggle:active {
+    transform: scale(0.95);
+  }
+
+  .hamburger {
+    grid-area: hamburger;
+    justify-self: end;
+  }
+
+  /* Menu de navegação - Comportamento melhorado */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(41, 7, 66, 0.98);
+    backdrop-filter: blur(5px);
+    padding: 8rem 2.4rem 2.4rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  nav.active {
+    transform: translateX(0);
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+
+
+  }
+
+  nav.active .close-menu {
+    display: block;
+  }
+
+  /* Lista de navegação - Acessibilidade melhorada */
+  nav ul {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+    list-style: none;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--roboto-font);
+    transition: color 0.2s ease;
+    position: relative;
+  }
+
+  nav ul li a:hover,
+  nav ul li a:focus {
+    color: #4ae346;
+  }
+
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4ae346;
+    transition: width 0.3s ease;
+  }
+
+  nav ul li a:hover::after,
+  nav ul li a:focus::after {
+    width: 100%;
+  }
+
+  /* Barra de pesquisa - Posicionamento otimizado */
+  .search-bar {
+    grid-area: search;
+    order: 3;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .search-bar input {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+  }
+
+  /* BANNER MOBILE - Layout melhorado */
+  #bannerContainer {
+    flex-direction: column-reverse;
+    padding: 2.4rem;
+    gap: 3.2rem;
+  }
+
+  #bannerInfo {
+    width: 100%;
+  }
+
+  #bannerInfo-title {
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+  }
+
+  #bannerImg {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* MAIN CONTENT - Ajustes responsivos */
+  #main {
+    padding: 3.2rem 2.4rem;
+    gap: 4rem;
+  }
+
+  #mainContainer1,
+  #mainContainer2 {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  #mainContainer1 #mainSection1,
+  #mainContainer1 #mainContainer1-aside {
+    width: 100%;
+  }
+
+  /* Controle de scroll quando menu aberto */
+  body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+  }
+  
+
+  /* Animações melhoradas */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  nav.active ul {
+    animation: fadeIn 0.4s 0.2s ease-out forwards;
+  }
+
+  /* Melhorias de acessibilidade para foco */
+  .menu-toggle:focus-visible,
+  .close-menu:focus-visible {
+    outline: 2px solid #4ae346;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 }

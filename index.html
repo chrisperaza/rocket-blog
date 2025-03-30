@@ -9,6 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="shortcut icon"
+      href="./images/rocket-i.svg"
+      type="image/x-icon"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <title>RocketBlog</title>
   </head>
@@ -16,9 +23,21 @@
     <!-- HEADER -->
     <header>
       <div class="logo">
-        <img src="./images/logo.svg" alt="" />
+        <img src="./images/logo.svg" alt="Logo RocketBlog" />
       </div>
-      <nav>
+
+      <!-- Botão (visível apenas em mobile) -->
+      <button class="menu-toggle hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <img src="./images/button-hamburger-menu.svg" alt="Menu" />
+      </button>
+
+      <!-- Menú de navegación -->
+      <nav class="nav-menu">
+        <!-- Botão Fechar (visível apenas quando menu está aberto) -->
+        <button class="menu-toggle close-menu" aria-label="Fechar menu">
+          <img src="./images/button-close-menu.svg" alt="Fechar" />
+        </button>
+
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Sobre</a></li>
@@ -26,6 +45,9 @@
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
+      
+      <div class="nav-overlay"></div>
+
       <div class="search-bar">
         <input type="text" placeholder="Buscar" />
         <button title="Pesquisar">
@@ -177,5 +199,6 @@
         </section>
       </div>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>
